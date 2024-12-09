@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore ShedRain's premium umbrellas, including the Vortex V2 and Bubble Umbrella. Stylish, durable, and designed for every weather condition. Perfect for windy and rainy days.">
+    <meta name="keywords" content="ShedRain, Vortex Umbrella, Bubble Umbrella, Compact Travel Umbrella, durable umbrellas, stylish umbrellas, weather protection">
+    <title>ShedRain Umbrellas | Premium Weather Protection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-list">
+                <a href="index.html">
+                    <img src="./images/logo.webp" style="width: 150px; height: auto;" alt="ShedRain Logo - Premium Umbrellas for All Weather">
+                </a>                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="innovative_umbrella_page.html">Innovative Technology</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="stories.html">Stories</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    
+        <div class="products-header">
+            <h2>Our Featured Products</h2>
+        </div>
+        <section class="products">
+            <div class="product" onclick="openModal('vortex')">
+                <img src="./images/vortex.webp" alt="ShedRain Vortex V2 Umbrella - 54-inch vented compact umbrella for windy weather">
+                <h3>ShedRain Vortex V2</h3>
+                <p>54-inch vented jumbo compact umbrella for windy weather. Built with windproof technology and durable materials. Perfect for stormy days.</p>
+            </div>
+            <div class="product" onclick="openModal('bubble')">
+                <img src="./images/bubble.webp" alt="Clear Bubble Umbrella - Stylish and functional transparent canopy umbrella">
+                <h3>Clear Bubble Umbrella</h3>
+                <p>Fashion-forward design with deep-domed protection and transparent canopy for easy visibility in style. Ideal for rainy days in style.</p>
+            </div>
+            <div class="product" onclick="openModal('compact')">
+                <img src="./images/compact.webp" alt="Compact Travel Umbrella - Lightweight and portable auto-open umbrella">
+                <h3>Compact Travel Umbrella</h3>
+                <p>Lightweight and portable with an auto-open mechanism, perfect for on-the-go protection. Keep dry wherever you go.</p>
+            </div>
+            <div class="product" onclick="openModal('MINI')">
+                <img src="./images/MINI.webp" alt="Compact Travel Umbrella - Ultra-lightweight, durable, and auto-open mechanism">
+                <h3>Mini Compact Travel Umbrella</h3>
+                <p>The Mini Compact Travel Umbrella is designed for those who need a practical, ultra-portable solution for unexpected rain. Weighing only 0.5 pounds and folding down to just 6 inches in length, this umbrella fits easily in a backpack, purse, or glove compartment. Despite its small size, the umbrella features a robust fiberglass frame and an auto-open mechanism, ensuring fast, reliable protection during sudden downpours. With a 38-inch canopy, it offers ample coverage while remaining compact and easy to carry.</p>
+            </div>  
+            <div class="product" onclick="openModal('AUTOOPEN')">
+                <img src="./images/AUTOOPEN.webp" alt="Auto-Open Umbrella - Convenient one-handed operation for quick rain protection">
+                <h3>Auto-Open Umbrella</h3>
+                <p>The Auto-Open Umbrella is designed for fast, one-handed operation, perfect for busy individuals on the go. With a simple press of a button, the umbrella automatically opens in seconds, ensuring immediate protection when you need it most. It features a 42-inch canopy that provides ample coverage, while the fiberglass frame offers superior flexibility and durability. The umbrella is lightweight (weighs just 0.6 pounds) and compact, easily fitting into bags or backpacks. Ideal for quick escapes from rain without fumbling with manual openers.</p>
+            </div>
+            <div class="product" onclick="openModal('VINTAGE')">
+                <img src="./images/VINTAGE.webp" alt="Vintage Umbrella - Classic design with a sturdy wooden handle and retro charm">
+                <h3>Vintage Umbrella</h3>
+                <p>The Vintage Umbrella combines timeless elegance with modern functionality. Featuring a classic wooden handle, this umbrella evokes the charm of vintage umbrellas while ensuring durability. The 48-inch canopy provides excellent rain protection, and the durable metal frame withstands strong winds. Weighing just 0.8 pounds, it’s lightweight enough for daily use while remaining sturdy. Ideal for those who appreciate both style and practicality, the Vintage Umbrella is perfect for classic weather protection in any season.</p>
+            </div>              
+        </section>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <a id="buy-link" href="#"><button class="buy">Buy Now</button></a>
+                <button class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShedRain. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.instagram.com/shedrain" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/shedrain" target="_blank">Facebook</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const products = {
+            vortex: {
+                title: 'ShedRain Vortex V2',
+                description: '54-inch vented jumbo compact umbrella for windy weather. Built with windproof technology and durable materials. Perfect for stormy days.',
+                buyLink: 'checkout.html?product=vortex'
+            },
+            bubble: {
+                title: 'Clear Bubble Umbrella',
+                description: 'Fashion-forward design with deep-domed protection and transparent canopy for easy visibility in style. Ideal for rainy days in style.',
+                buyLink: 'checkout.html?product=bubble'
+            },
+            compact: {
+                title: 'Compact Travel Umbrella',
+                description: 'Lightweight and portable with an auto-open mechanism, perfect for on-the-go protection. Keep dry wherever you go.',
+                buyLink: 'checkout.html?product=compact'
+            },
+            MINI: {
+        title: 'Mini Compact Travel Umbrella',
+        description: 'The Mini Compact Travel Umbrella is designed for those who need a practical, ultra-portable solution for unexpected rain. Weighing only 0.5 pounds and folding down to just 6 inches in length, this umbrella fits easily in a backpack, purse, or glove compartment. Despite its small size, the umbrella features a robust fiberglass frame and an auto-open mechanism, ensuring fast, reliable protection during sudden downpours.',
+        buyLink: 'checkout.html?product=MINI'
+    },
+    AUTOOPEN: {
+        title: 'Auto-Open Umbrella',
+        description: 'The Auto-Open Umbrella is designed for fast, one-handed operation, perfect for busy individuals on the go. With a simple press of a button, the umbrella automatically opens in seconds, ensuring immediate protection when you need it most.',
+        buyLink: 'checkout.html?product=AUTOOPEN'
+    },
+    VINTAGE: {
+        title: 'Vintage Umbrella',
+        description: 'The Vintage Umbrella combines timeless elegance with modern functionality. Featuring a classic wooden handle, this umbrella evokes the charm of vintage umbrellas while ensuring durability. The 48-inch canopy provides excellent rain protection.',
+        buyLink: 'checkout.html?product=VINTAGE'
+    }
+        
+        };
+
+        function openModal(productKey) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const description = document.getElementById('modal-description');
+            const buyLink = document.getElementById('buy-link');
+
+            title.textContent = products[productKey].title;
+            description.textContent = products[productKey].description;
+            buyLink.href = products[productKey].buyLink;
+
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

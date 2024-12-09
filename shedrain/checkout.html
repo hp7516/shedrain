@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your purchase of ShedRain umbrellas. Secure checkout for our premium products including Vortex V2, Clear Bubble, and Compact Travel Umbrella.">
+    <meta name="keywords" content="ShedRain checkout, buy ShedRain umbrella, Vortex V2, Clear Bubble Umbrella, Compact Travel Umbrella, umbrella shopping, secure checkout">
+    <title>Checkout | ShedRain Umbrellas - Complete Your Purchase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-list">
+                <a href="index.html">
+                    <img src="./images/logo.webp" style="width: 150px; height: auto;" alt="ShedRain Logo - Premium Umbrellas for All Weather">
+                </a>                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="innovative_umbrella_page.html">Innovative Technology</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="stories.html">Stories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Checkout</h1>
+        <div class="product-details">
+            <h2 id="product-title">Product Title</h2>
+            <p id="product-description">Product description will be displayed here.</p>
+        </div>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Shipping Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <button type="submit" class="checkout-button">Place Order</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShedRain. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.instagram.com/shedrain" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/shedrain" target="_blank">Facebook</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Extract query parameters
+        const params = new URLSearchParams(window.location.search);
+        const productKey = params.get('product');
+
+        // Product details map
+        const productDetails = {
+            vortex: {
+                title: 'ShedRain Vortex V2',
+                description: '54-inch vented jumbo compact umbrella for windy weather. Built with windproof technology and durable materials.'
+            },
+            bubble: {
+                title: 'Clear Bubble Umbrella',
+                description: 'Fashion-forward design with deep-domed protection and transparent canopy for easy visibility in style.'
+            },
+            compact: {
+                title: 'Compact Travel Umbrella',
+                description: 'Lightweight and portable with an auto-open mechanism, perfect for on-the-go protection.'
+            },
+             "led-umbrella": {
+                title: "LED High-Tech Umbrella",
+                description: "Experience unmatched visibility and style with our LED-enhanced umbrella. Perfect for nighttime use and navigating dark streets."
+            },
+            MINI: {
+                title: 'Mini Compact Travel Umbrella',
+                description: 'The Mini Compact Travel Umbrella is designed for those who need a practical, ultra-portable solution for unexpected rain.'
+            },
+            AUTOOPEN: {
+                title: 'Auto-Open Umbrella',
+                description: 'The Auto-Open Umbrella is designed for fast, one-handed operation, perfect for busy individuals on the go.'
+            },
+            VINTAGE: {
+                title: 'Vintage Umbrella',
+                description: 'The Vintage Umbrella combines timeless elegance with modern functionality. Featuring a classic wooden handle.'
+            }
+        };
+
+        // Update page with product details
+        if (productKey && productDetails[productKey]) {
+            document.getElementById('product-title').textContent = productDetails[productKey].title;
+            document.getElementById('product-description').textContent = productDetails[productKey].description;
+        }
+
+        // Form submission handler
+        const form = document.getElementById('checkout-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Show thank you message and redirect to home
+            alert('Thank you for your order! Your premium ShedRain umbrella is on its way!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
